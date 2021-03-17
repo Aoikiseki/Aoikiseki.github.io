@@ -433,7 +433,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-03-17 22:49:45 / 修改时间：22:50:54" itemprop="dateCreated datePublished" datetime="2021-03-17T22:49:45+08:00">2021-03-17</time>
+      <time title="创建时间：2021-03-17 22:49:45 / 修改时间：22:57:47" itemprop="dateCreated datePublished" datetime="2021-03-17T22:49:45+08:00">2021-03-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -470,8 +470,7 @@
 <li>URL：统一资源定位符。对某一资源提供了具体的访问地址和访问方式。</li>
 </ul>
 <p>显然URI &gt;= URL，能够提供具体访问方式的资源都是URI，但是并不是所有URI都提供了访问方式 。HTTP请求中请求的是URI，但是由于绝大部分情况都是根据资源地址进行请求，所以大部分时候也是URL。</p>
-<h2 id="HTTP的报文结构"><a href="#HTTP的报文结构" class="headerlink" title="HTTP的报文结构"></a>HTTP的报文结构</h2><h3 id="请求报文"><a href="#请求报文" class="headerlink" title="请求报文"></a>请求报文</h3><p>![image-20201115184052614](/Users/yuanhao/Library/Application Support/typora-user-images/image-20201115184052614.png)</p>
-<p>上面图示的报文头包含了比较常用的报文头字段，只是所有报文头字段的一部分，报文头字段总体可以分为通用报文头、请求报文头、响应报文头和实体报文头四类，在HTTP/1.1中一共规范了47种报文头字段。</p>
+<h2 id="HTTP的报文结构"><a href="#HTTP的报文结构" class="headerlink" title="HTTP的报文结构"></a>HTTP的报文结构</h2><h3 id="请求报文"><a href="#请求报文" class="headerlink" title="请求报文"></a>请求报文</h3><p>报文头字段总体可以分为通用报文头、请求报文头、响应报文头和实体报文头四类，在HTTP/1.1中一共规范了47种报文头字段。</p>
 <p>下面对比较常用的字段进行说明</p>
 <ul>
 <li>ACCEPT：浏览器端可以接受的媒体类型。比如text/html就是可以接受服务端返回的text/html类型，如果服务端没有对应类型，则返回406错误；而*/*代表浏览器可以接受所有类型。</li>
@@ -480,7 +479,7 @@
 <li>User-Agent：客户端的操作系统和浏览器版本</li>
 <li>Content-Type：报文体内对象的媒体类型。在项目中比较常用的就是<code>application/json</code>。</li>
 </ul>
-<h3 id="响应报文"><a href="#响应报文" class="headerlink" title="响应报文"></a>响应报文</h3><p>![image-20201115191453071](/Users/yuanhao/Library/Application Support/typora-user-images/image-20201115191453071.png)</p>
+<h3 id="响应报文"><a href="#响应报文" class="headerlink" title="响应报文"></a>响应报文</h3><p>响应报文字段可以抓包查看</p>
 <h2 id="HTTP的请求方法"><a href="#HTTP的请求方法" class="headerlink" title="HTTP的请求方法"></a>HTTP的请求方法</h2><ul>
 <li><p>GET：用来请求和访问已被URI识别的资源。GET也可以用来发送表单，提交数据，但提交信息直接拼在URI后面，一个是安全隐患，一个是有长度限制（不同的浏览器限制不同）</p>
 </li>
@@ -631,12 +630,9 @@
 <p>整个流程后50%没有变化，只是前50%的流程引入了证书机构</p>
 <h1 id="WebSocket"><a href="#WebSocket" class="headerlink" title="WebSocket"></a>WebSocket</h1><p>WebSocket是HTTP的长连接实现，并且兼容了现有的HTTP协议</p>
 <h2 id="WebSocket的握手"><a href="#WebSocket的握手" class="headerlink" title="WebSocket的握手"></a>WebSocket的握手</h2><p>WebSocket借用HTTP完成握手</p>
-<p>客户端向服务端发送的WebSocket请求内容如下：</p>
-<p>![image-20201125233156498](/Users/yuanhao/Library/Application Support/typora-user-images/image-20201125233156498.png)</p>
+<p>客户端首先向服务端发送的http请求内容包含如下内容：</p>
 <p>Upgrade：websocket，告诉服务器当前使用websocket协议</p>
 <p>Sec-WebSocket-Key：浏览器生成的base64加密串，用于验证服务器的websocket有效性</p>
-<p>服务端返回的内容如下：</p>
-<p>![image-20201125233503618](/Users/yuanhao/Library/Application Support/typora-user-images/image-20201125233503618.png)</p>
 <p>传统的HTTP只能用于客户端向服务端发送请求，有两种解决方式</p>
 <ul>
 <li>AJAX轮询（固定时间轮询）</li>
@@ -645,7 +641,6 @@
 <p>上面两种情况，对服务器要求都很高，前者要求有很快的处理速度，后者要求有很高的并发量。而WebSocket的出现就是为了解决这两个问题。</p>
 <p>WebSocket在完成握手之后，连接并不会消失，而客户端会通过回调的方式从服务端获取数据。</p>
 <p>同时WebSocket支持全双工通信，服务端不必等待请求可以直接向客户端发送数据</p>
-<p>![image-20201125234528499](/Users/yuanhao/Library/Application Support/typora-user-images/image-20201125234528499.png)</p>
 <ul>
 <li>全双工方式</li>
 <li>减少通信量：不再频繁交换header信息</li>
