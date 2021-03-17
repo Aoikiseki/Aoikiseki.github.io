@@ -21,12 +21,12 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+    var CONFIG = {"hostname":"aoikiseki.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
 <meta name="description" content="Git基本知识推荐一个Git可视化动画练习的网站https:&#x2F;&#x2F;learngitbranching.js.org&#x2F;?locale&#x3D;zh_CN 在熟悉Git前需要先了解三个基本概念：  工作区：可以理解为当前的工程文件夹 暂存区：暂时保存对工作区的修改，需要commit才能将暂存区的修改实现相对永久的保存 远程仓库：存储代码的远端Git服务器  安装Git略去安装过程，安装结束后需要指定本机用户名和">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git&amp;Gerrit">
-<meta property="og:url" content="http://example.com/Git&Gerrit">
+<meta property="og:url" content="https://aoikiseki.github.io/Git&Gerrit">
 <meta property="og:site_name" content="AoiKiseki">
 <meta property="og:description" content="Git基本知识推荐一个Git可视化动画练习的网站https:&#x2F;&#x2F;learngitbranching.js.org&#x2F;?locale&#x3D;zh_CN 在熟悉Git前需要先了解三个基本概念：  工作区：可以理解为当前的工程文件夹 暂存区：暂时保存对工作区的修改，需要commit才能将暂存区的修改实现相对永久的保存 远程仓库：存储代码的远端Git服务器  安装Git略去安装过程，安装结束后需要指定本机用户名和">
 <meta property="og:locale" content="zh_CN">
@@ -37,7 +37,7 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/Git&Gerrit">
+<link rel="canonical" href="https://aoikiseki.github.io/Git&Gerrit">
 
 
 <script class="page-configurations">
@@ -206,7 +206,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/Git&Gerrit">
+    <link itemprop="mainEntityOfPage" href="https://aoikiseki.github.io/Git&Gerrit">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
